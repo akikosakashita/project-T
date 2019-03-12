@@ -130,9 +130,17 @@ li.slider {
 /*///////////検索フォームここから/////////////////////////////////////////////////*/
 
 .form-area {
-  height: 70px;
+  width: 100%;
+  height: 65px;
   display:flex;
   justify-content: center;
+}
+@media screen and (max-width: 768px) {
+.form-area {
+width: 100%;
+justify-content: left;
+padding-left: 10px;
+}
 }
 
 form#form1 {
@@ -175,8 +183,10 @@ form#form1 {
 /*///////////検索フォームここまで/////////////////////////////////////////////////*/
 /*///////////メイン（サイトメッセージ）ここから/////////////////////////////////////////////////*/
 #site_msg {
-  padding-top: 15px;
-  height: 100px;
+  padding: 15px 0 15px 0;
+  display:block;
+  max-width: 100%;
+  height: auto;
   background-color: #666;
   text-align: center;
   h2 {
