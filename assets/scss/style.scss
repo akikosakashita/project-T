@@ -18,11 +18,6 @@ padding-left: 20px;
 }
 /*///////////ヘッダーロゴレスポンシブサイズ指定ここまで/////////////*/
 /*///////////ナビゲーションここから/////////////////////////////////////////////////*/
-
-.nav_content {
-  width: 1100px;
-  margin: 0 auto 0 auto;
-}
 * {
     font-family:"Kosugi","Russo+One&subset=japanese";
   -moz-box-sizing: border-box;
@@ -38,7 +33,6 @@ padding-left: 20px;
     padding: 0;
   }
 }
-
 body {
   background-color: #eee;
   line-height: 1.5;
@@ -46,13 +40,11 @@ body {
   font-size: 16px;
   color: #fff;
 }
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-#header {
+#top{
+  position:fixed;
+  width: 100%;
+  z-index: 100;
+  #header {
   background: #009dbf;
   width: 100%;
   position: relative;
@@ -61,57 +53,48 @@ a {
     clear: both;
     display: block;
   }
+  .nav_content {
+  width: 1100px;
+  margin: 0 auto 0 auto;
+  a {
+  text-decoration: none;
+  color: #fff;
 }
-
-input {
-  border: none;
-  padding: 10px;
-  border-radius: 20px;
-}
-
 .logo {
   float: left;
   padding: 26px 0 26px;
+  span {
+    display:block;
+    padding-left: 10px;
+  }
   a {
     font-size: 28px;
     display: block;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 10px;
   }
-}
-
+}/////*.logo*//////
 nav {
   float: right;
-  > ul {
+   ul {
     float: left;
     position: relative;
-  }
+     &:hover ul {
+      display: inline;
+    }
   li {
     list-style: none;
     float: left;
-  }
-  .dropdown {
-    position: relative;
-  }
-  li {
-    a {
+   // &:hover {display:inline;}
+      a {
       float: left;
       padding: 35px;
       &:hover {
-        background: #2C3E50;
+      background: #fdd800;
+      color: #00d2fc;
       }
-    }
-    ul {
-      display: none;
-    }
-    &:hover ul {
-      display: inline;
-    }
-    li {
-      float: none;
-    }
-  }
-
-
+    }/////*a*//////
+  }/////*li*//////
+  }/////*ul*//////
 li a {
     float: none;
     color: #fff;
@@ -124,9 +107,18 @@ li a {
       background: #FAFBFB;
     }
   }
+}/////*nav*//////
+}/////*.nav_content*//////
+}/////*#header*//////
+.form-area{
+input {
+  border: none;
+  padding: 10px;
 }
+}
+}/////*#topここまで*//////
 
-#menu-icon {
+#menu-icon {/////*ハンバーガーアイコン*//////
   position: absolute;
   right: 0;
   top: 50%;
@@ -141,28 +133,49 @@ li a {
     -webkit-transition: all .2s;
     transition: all .1s;
   }
-}
+}/////*ハンバーガーアイコンここまで*//////
 
 @media only screen and (max-width: 1170px) {
-  nav > ul > li > a {
-    padding: 35px 15px;
-  }
+nav ul li a {padding: 35px 15px;}
 }
-
 @media only screen and (min-width: 960px) {
-  nav {
-    display: block !important;
-  }
+  nav {display: block !important;}
 }
-
 @media only screen and (max-width: 959px) {
-  nav {
+nav {
     display: none;
+     float: none;
     width: 100%;
     clear: both;
-    float: none;
     max-height: 400px;
     overflow-y: scroll;
+    padding: 10px;
+   ul {
+      display: block;
+      position: static;
+      background: none;
+      border: none;
+      padding: 0;
+   li {
+      float: none!important;
+
+    a {
+      float: none!important;
+      padding: 14px!important;
+      display: block!important;
+      color: #fff;
+      width: 350px;
+      &:hover {
+        background-color: #fdd800!important;
+        color: #009dbf!important;
+        border-radius: 3px!important;
+    }
+    &:before {
+      content: "- ";
+    }
+    }
+  }
+  }
   }
   #menu-icon {
     display: inline;
@@ -185,42 +198,7 @@ li a {
       }
     }
   }
-
-  nav {
-    padding: 10px;
-    ul, li {
-      float: none;
-    }
-    ul li a {
-      float: none;
-      padding: 8px;
-      display: block;
-    }
-  }
-#header nav {
-    ul ul {
-      display: block;
-      position: static;
-      background: none;
-      border: none;
-      padding: 0;
-    }
-    a {
-      color: #fff;
-      padding: 8px;
-      &:hover {
-        background: #fff;
-        color: #333;
-        border-radius: 3px;
-      }
-    }
-    ul li li a:before {
-      content: "- ";
-    }
-  }
 }
-
-
 /*///////////ナビゲーションここまで/////////////////////////////////////////////////*/
 
 /*///////////検索フォームここから/////////////////////////////////////////////////*/
@@ -255,7 +233,7 @@ padding-left: 10px;
   width: 400px;
   height: 50px;/*検索ボックスの高さ*/
   padding: 0 10px;/*テキスト位置調整*/
-  border-radius: 10px 0 0 10px;/*検索ボックスの角を丸める*/
+  border-radius: 20px 0 0 20px;/*検索ボックスの角を丸める*/
   background: #fff;/*検索ボックスの背景カラー*/
 }
 @media screen and (max-width: 768px) {
@@ -272,14 +250,15 @@ padding-left: 10px;
   position: absolute;/*検索ボタンの絶対位置*/
   left: 400px;/*検索ボタンの位置調整*/
   top: 0;
-  border-radius: 0 10px 10px 0;/*検索ボタンの角を丸める*/
-  background: #009928;/*検索ボタンの背景カラー*/
+  border-radius: 0 20px 20px 0;/*検索ボタンの角を丸める*/
+  background: #ddd;/*検索ボタンの背景カラー*/
   border: none;/*検索ボタンの枠線を消す*/
   color: #fff;/*検索ボタンのテキストカラー*/
   font-weight: bold;/*検索ボタンのテキスト太字*/
   font-size: 16px;/*検索ボタンのフォントサイズ*/
   &:hover {
     color: #00d2fc;/*検索ボタンマウスオーバー時のフォントカラー*/
+    background-color: #fdd800;
   }
 }
 @media screen and (max-width: 768px) {
@@ -287,6 +266,9 @@ padding-left: 10px;
 left:55%;
 width: 50px;
 height: 40px;
+&:hover {
+  background-color: #fdd800;
+}
 }
 }
 /*検索ボタンマウスオーバー時*/
@@ -295,29 +277,53 @@ height: 40px;
 footer {
   background-color: #009dbf;
   width: 100%;
-  height: 300px;
+  height: 320px;
   bottom: 0;
   .container {
     padding-top: 20px;
     text-align: center;
-  .ft-nav ul{
-  list-style-type: none;
+  .ft-nav {
+    padding: 10px;
+  ul{
+display:block;
+  li {
+    list-style-type: none;
+    margin: 5px;
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover{
+      color: #fdd800;
+    }
+  }
+}
+}
 }
   .sns {
-    padding-top: 20px;
+    padding-top: 15px;
     width: 100%;
     text-align: center;
+    a span i {
+      color: #fff;
+      &:hover {
+        color: #fdd800;
+      }
+    }
 }
 .padding {
       padding: 10px;
     }
   p{
-    font-size: 12px;
     text-align: center;
   }
   }
 }
 /*///////////フッターここまで////////////////////////////*/
+/*///////////スライドここから////////////////////////////*/
+.carousel-inner {
+  padding-top: 190px;
+}
+/*///////////スライドここまで////////////////////////////*/
 /*///////////メイン（サイトメッセージ）ここから///////////////////*/
 #site_msg {
   padding: 15px 0 15px 0;
@@ -333,6 +339,7 @@ footer {
 @media screen and (max-width: 768px) {
 h2 {
   font-size: 120%;
+  text-align: left;
 }
 }
     h3 {
@@ -396,94 +403,3 @@ text-align: left;
   text-align: center;
 }
 /*///////////topへ戻るボタンここまで/////////////////////////////////////////////////*/
-
-
-// #top {
-//   background-color: #009dbf;
-//   box-sizing: border-box;
-// }
-// .nav_content {
-//   width: 1100px;
-//   margin: 0 auto 0 auto;
-//   }
-
-// .menu {
-//   list-style: none;
-//   margin: 0;
-//   padding: 0;
-//   width: 60%;
-//   height: 60px;
-//   margin: auto;
-//   position: relative;
-//   background-color: #009dbf;
-//   z-index: 7;
-//   float: left;
-//   li {
-//     float: left;
-//     width: 20%;
-//     height: 100%;
-//     margin: 0;
-//     padding: 0;
-//   }
-//   a {
-//     display: flex;
-//     width: 100%;
-//     height: 100%;
-//     justify-content: center;
-//     align-items: center;
-//     color: #fff;
-//     text-decoration: none !important;
-//     position: relative;
-//     font-size: 16px;
-//     z-index: 9;
-//   }
-// }
-
-// a.active {
-//   background-color: #fdd800;
-//   pointer-events: none;
-// }
-
-// li.slider {
-//   width: 20%;
-//   height: 100%;
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   background-color: #fdd800;
-//   z-index: 8;
-//   transition: left 0.4s, background-color 0.4s;
-// }
-
-// .menu li {
-//   &:nth-child(1) {
-//     &:hover ~ .slider, &:focus ~ .slider, &:active ~ .slider {
-//       left: 0;
-//       background-color: #3498db;
-//     }
-//   }
-//   &:nth-child(2) {
-//     &:hover ~ .slider, &:focus ~ .slider, &:active ~ .slider {
-//       left: 20%;
-//       background-color: #9b59b6;
-//     }
-//   }
-//   &:nth-child(3) {
-//     &:hover ~ .slider, &:focus ~ .slider, &:active ~ .slider {
-//       left: 40%;
-//       background-color: #e67e22;
-//     }
-//   }
-//   &:nth-child(4) {
-//     &:hover ~ .slider, &:focus ~ .slider, &:active ~ .slider {
-//       left: 60%;
-//       background-color: #ff0099;
-//     }
-//   }
-//   &:nth-child(5) {
-//     &:hover ~ .slider, &:focus ~ .slider, &:active ~ .slider {
-//       left: 80%;
-//       background-color: #009928;
-//     }
-//   }
-// }
