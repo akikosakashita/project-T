@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black|Kosugi|Kosugi+Maru|Russo+One&subset=japanese');
 
 html, body, .form-area {
@@ -19,6 +20,7 @@ padding-left: 20px;
 /*///////////ヘッダーロゴレスポンシブサイズ指定ここまで/////////////*/
 /*///////////ナビゲーションここから/////////////////////////////////////////////////*/
 * {
+    line-height: 1.4em!important;
     font-family:"Kosugi","Russo+One&subset=japanese";
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -35,7 +37,7 @@ padding-left: 20px;
 }
 body {
   background-color: #eee;
-  line-height: 1.5;
+
   text-transform: uppercase;
   font-size: 16px;
   color: #fff;
@@ -402,4 +404,71 @@ text-align: left;
   margin: auto;
   text-align: center;
 }
-/*///////////topへ戻るボタンここまで/////////////////////////////////////////////////*/
+/*///////////topへ戻るボタンここまで//////////////////*/
+/*////////お問い合わせページcontact.htmlここから//////////*/
+#level{/*//////パンくずリスト////////*/
+  padding-top: 210px;
+  ul {
+    list-style-type: none;
+    padding-left: 10px;
+    li {
+      display:block;
+      position: relative;
+      float:left;
+    }
+  }
+}
+#main {
+margin-bottom: 17px;
+  padding: 15px 0 15px 20px;
+  width: 100%;
+  height: 100%;
+  h1{
+  margin: 0;
+  padding: 30px 0 30px 0;
+  font-size: 200%;
+  }
+  @media screen and (max-width: 768px) {
+    h1{
+      padding-left: 0;
+      font-size: 180%;
+    }
+  }
+  #contact-form {
+  padding-top: 30px;
+  width: 100%;
+   p {
+    width: 100%;
+    display: block;
+     margin: 0 auto 30px auto;
+  }
+  input[type="text"],input[type="tel"],input[type="email"],textarea {
+  border:1px solid #666666;
+  border-radius: 3px;
+  }
+  input[type="tel"] {width: 200px;}
+  input[type="email"] {width: 300px;}
+  textarea {width: 300px; height: 100px; overflow-y: scroll;}
+  }
+}
+/*////////お問い合わせページcontact.htmlここまで//////////*/
+/*////////ストア概要ページabout.htmlここから//////////*/
+ @media screen and (max-width: 768px) {
+#about h1{
+  padding-bottom: 10px;
+  font-size: 120%;
+ }
+}
+/*////////ストア概要ページabout.htmlここまで//////////*/
+/*////////写真ページphoto.htmlここから//////////*/
+/*////////写真ページphoto.htmlここまで//////////*/
+/*////////ご利用規約ページpolicy.htmlここから//////////*/
+/*////////ご利用規約policy.htmlここまで//////////*/
+/*////////404ページ404.htmlここから//////////*/
+#notfoundpage {
+  h1 {
+    padding-top: 15px;
+    font-size: 150%;
+  }
+}
+/*////////404ページ404.htmlここまで//////////*/
