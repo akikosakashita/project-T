@@ -463,6 +463,23 @@ margin-bottom: 17px;
 /*////////写真ページphoto.htmlここから//////////*/
 /*////////写真ページphoto.htmlここまで//////////*/
 /*////////ご利用規約ページpolicy.htmlここから//////////*/
+.jumbotron-extend {
+ margin-top: 30px;
+  height: 100px;
+  background-image: url(../images/policy-001.jpg);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+}
+@media screen and (max-width: 768px) {
+  .jumbotron-extend {
+    background-size: 100% auto;
+   h1{
+    font-size: 180%;
+  }
+  }
+}
 /*////////ご利用規約policy.htmlここまで//////////*/
 /*////////404ページ404.htmlここから//////////*/
 #notfoundpage {
