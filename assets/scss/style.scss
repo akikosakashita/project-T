@@ -329,6 +329,28 @@ display:block;
   }
   }
 }
+@media screen and (max-width: 768px) {
+  #home{
+  .carousel-indicators {
+    li {
+      display:none;
+    }
+  }
+  .carousel-item {
+    img {
+      height: 200%!important;
+    }
+  }
+  .container {
+    h1 {
+      display: none!important;
+    }
+     p {
+      display: none!important;
+    }
+  }
+ }
+}
 /*///////////スライドここまで////////////////////////////*/
 /*///////////メイン（サイトメッセージ）ここから///////////////////*/
 #site_msg {
