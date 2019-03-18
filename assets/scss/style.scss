@@ -323,11 +323,12 @@ display:block;
 /*///////////フッターここまで////////////////////////////*/
 /*///////////スライドここから////////////////////////////*/
 #home{
-  .carousel-inner {
+  main {
+      .carousel-inner {
   padding-top: 190px;
+  }
+  }
 }
-}
-
 /*///////////スライドここまで////////////////////////////*/
 /*///////////メイン（サイトメッセージ）ここから///////////////////*/
 #site_msg {
@@ -501,17 +502,48 @@ margin: 0 auto 17px 0!important;
 }
 /*////////ストア概要ページabout.htmlここまで//////////*/
 /*////////写真ページphoto.htmlここから//////////*/
+#photo {
+  #main  {
+    padding-bottom: 0;
+    h1.text-center {
+      padding-bottom: 0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+     .row {
+   padding-top: 55px;
+  }
+  }
+  .jumbotron-photo {
+    padding-top: 0;
+    height: 50px;
+    background-color: #ffffff;
+    nav a:hover {
+      text-decoration: none;
+      color: #009dbf!important;
+    }
+  }
+}
+
 /*////////写真ページphoto.htmlここまで//////////*/
 /*////////ご利用規約ページpolicy.htmlここから//////////*/
-.jumbotron-extend {
+#policy{
+  .jumbotron-extend {
  margin-top: 30px;
   height: 100px;
   background-image: url(../images/policy-001.jpg);
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 100% auto;
-
 }
+.blog-main{
+  padding-left: 0;
+  margin-left: 20px;
+ ol li{
+  margin-left: 30px;
+ }
+}
+
 @media screen and (max-width: 768px) {
   .jumbotron-extend {
     background-size: 100% auto;
@@ -520,6 +552,10 @@ margin: 0 auto 17px 0!important;
   }
   }
 }
+}
+
+
+
 /*////////ご利用規約policy.htmlここまで//////////*/
 /*////////404ページ404.htmlここから//////////*/
 #notfoundpage {
