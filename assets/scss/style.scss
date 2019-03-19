@@ -577,34 +577,30 @@ table {
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
-td {
-  padding: 5px;
-  border-color: #666;
-    border-style:solid;
-    border-width: 1px 0;
-  &:nth-child(2), &:nth-child(3) {
-  text-align: center;
-}
   tr {
     border-color: #666;
     border-style:solid;
     border-width: 1px 0;
-    &:nth-child(even) td {
-  background-color: #ddd;
-}
-  .size,span {
+    &:nth-child(even) td {background-color: #ddd;}
+    td {
+      padding:8px 0;
+      text-align: center;
+   .size,span {
     padding:0;
     font-size: 16px;
     background-color: #666;
     color: #fff;
     }
-  }
+    }
+}
+
+
 }
 }
 .text {display: none;}
 .text01,.text02,.text03,.text04 {display: block;}
 .button {/*////////カートに入れるボタン//////////*/
-  margin-top: 20px;
+  margin: 20px auto 30px 25px;
   display: inline-block;
   width: 260px;
   border-radius : 3%;          /* 角丸       */
@@ -623,7 +619,6 @@ td {
   box-shadow    : none;        /* カーソル時の影消去 */
   color         : #000066;     /* 背景色     */
   background    : #ffffff;     /* 文字色     */
-}
 }
 }
 /*////////写真ページ＞作品情報photoProdact.htmlここまで//////////*/
