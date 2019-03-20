@@ -571,8 +571,23 @@ margin: 0 auto 17px 0!important;
 /*////////写真ページphoto.htmlここまで//////////*/
 /*////////写真ページ＞作品情報photoProdact.htmlここから//////////*/
 #photoProdact {
+  .card-body{
+    h2{
+      font-size: 130%;
+    }
+  }
+  dt {
+    float:left;
+  }
+  dd{
+    margin-left:150px;
+  }
 .p-4 {
       padding: 0!important;
+      h4{
+        text-align: center;
+        padding: 20px 0;
+      }
 table {
   width: 100%;
   border-collapse: collapse;
@@ -583,18 +598,20 @@ table {
     border-width: 1px 0;
     &:nth-child(even) td {background-color: #ddd;}
     td {
-      padding:8px 0;
+      padding:10px 0;
+      // text-align: center;
+       &:nth-child(2),&:nth-child(3){
       text-align: center;
+    }
+    &:nth-child(4) {
+      width: 170px;
+    }
    .size,span {
     padding:0;
-    font-size: 16px;
-    background-color: #666;
-    color: #fff;
+    font-size: 18px;
     }
     }
 }
-
-
 }
 }
 .text {display: none;}
