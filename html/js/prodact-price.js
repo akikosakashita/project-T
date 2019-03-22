@@ -1,17 +1,17 @@
 $(function() {
   $('[name="btn"]:radio').change( function() {
     if($('[id=a]').prop('checked')){
-      $('.text').fadeOut();
-      $('.text01').fadeIn();
+      $('.total').fadeOut();
+      $('.price01').fadeIn();
     } else if ($('[id=b]').prop('checked')) {
-      $('.text').fadeOut();
-      $('.text02').fadeIn();
+      $('.total').fadeOut();
+      $('.price02').fadeIn();
     } else if ($('[id=c]').prop('checked')) {
-      $('.text').fadeOut();
-      $('.text03').fadeIn();
+      $('.total').fadeOut();
+      $('.price03').fadeIn();
     } else if ($('[id=d]').prop('checked')) {
-      $('.text').fadeOut();
-      $('.text04').fadeIn();
+      $('.total').fadeOut();
+      $('.price04').fadeIn();
     }
   });
 });
