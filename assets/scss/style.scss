@@ -329,9 +329,17 @@ display:block;
 /*///////////スライドここから////////////////////////////*/
 #home{
   main {
-      .carousel-inner {
+ .carousel-inner {
   padding-top: 190px;
+    }
+  .carousel-caption {
+    .viewbtn{
+    letter-spacing:0.4em;
+    .btn {
+     background-color: rgba(10, 180, 240, 0.5)!important;
+    }
   }
+    }
   }
 }
 @media screen and (max-width: 768px) {
@@ -388,8 +396,20 @@ text-align: left;
 
 /*///////////メイン（サイトメッセージ）ここまで///////////////*/
 /*///////////メイン（トピックス）ここから///////////////*/
-
-/*///////////メイン（トピックス）ここまで///////////////*/
+#home {
+    .topix {
+      .card-img-overlay {
+        padding: 0;
+      }
+      h4{
+         transform: translateY(280%) translateX(0%);
+        color: #fff;
+        letter-spacing:0.3em;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+}
+/*//////////メイン（トピックス）ここまで///////////////*/
 
 /*///////////topへ戻るボタンここから/////////////////////////////////////////////////*/
 #page_top{
