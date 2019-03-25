@@ -582,7 +582,9 @@ margin: 0 auto 17px 0!important;
 }
 /*////////ストア概要ページabout.htmlここまで//////////*/
 /*////////写真ページphoto.htmlここから//////////*/
+
 #photo {
+
 
   article p{
     color: #9c9c9c;
@@ -593,7 +595,7 @@ margin: 0 auto 17px 0!important;
   @media screen and (max-width: 768px) {
     article p {
       font-size: 85%;
-      text-align: left
+      text-align: left;
     }
   }
   #main  {
@@ -601,7 +603,7 @@ margin: 0 auto 17px 0!important;
     h1.text-center {
       padding-bottom: 0;
       }
-    }
+}
 
 
   @media screen and (max-width: 768px) {
@@ -655,6 +657,7 @@ margin: 0 auto 17px 0!important;
       margin-bottom: 0;
     }
   }
+
 }
 
 /*////////写真ページphoto.htmlここまで//////////*/
@@ -765,5 +768,9 @@ table {
     padding-top: 15px;
     font-size: 150%;
   }
+@media screen and (max-width: 768px) {
+  .notfound { width: 100%;}
+  h1 {font-size: 100%;}
+}
 }
 /*////////404ページ404.htmlここまで//////////*/
