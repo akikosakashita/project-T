@@ -456,11 +456,7 @@ text-align: left;
   text-align: center;
 }
 /*///////////topへ戻るボタンここまで//////////////////*/
-.anchor{/*////photo.htmlページ内リンクジャンプ位置調整///*/
-    display: block;
-    padding-top: 194px;
-    margin-top: -194px;
-}
+
 
 /*////////お問い合わせページcontact.htmlここから//////////*/
 #level{/*//////パンくずリスト////////*/
@@ -583,7 +579,20 @@ margin: 0 auto 17px 0!important;
 /*////////ストア概要ページabout.htmlここまで//////////*/
 /*////////写真ページphoto.htmlここから//////////*/
 #photo {
-
+div.col-md-4{
+      margin-top: 0!important;
+      height: 150px;
+      }
+.blog-post.anchor{/*////photo.htmlページ内リンクジャンプ位置調整///*/
+    display: block;
+    padding-top: 194px;
+    margin-top: -194px;
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+}
+background: #F1F1F1;
   article p{
     color: #9c9c9c;
     padding-top: 20px;
@@ -646,8 +655,8 @@ margin: 0 auto 17px 0!important;
   h2 {
     font-size: 140%;
     border-bottom: 2px solid #666;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 5px;
   }
   @media screen and (max-width: 768px) {
     h2{
@@ -655,8 +664,67 @@ margin: 0 auto 17px 0!important;
       margin-bottom: 0;
     }
   }
+
+section.tab {
+  background: #F1F1F1;
 }
 
+article {
+  padding: 10px 0 20px;
+}
+
+.tabs {
+ div {
+    /*border-top: 1px solid #c7c7c7*/
+    margin-top: 10px;
+    background: white !important;
+    /*border-bottom: 4px solid #E95855 !important;*/
+    span {
+      border-bottom: 4px solid #E5E5E5 !important;
+      color: #ccc !important;
+      font-weight: 300;
+      line-height: 186px !important;
+      display: block;
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+  ul.horizontal {
+    list-style: none outside none;
+    margin-bottom: 20px;
+
+  li {
+    background: white;
+    border-bottom: 4px solid #E5E5E5;
+    margin: 0 10px 0 0;
+    display: inline-block;
+     &:hover {
+    background: #a0cac0;
+    border-bottom: 4px solid #68a697;
+  }
+  a {
+    color: #ccc;
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 20px 20px;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+    }
+  }
+.active {
+  background: #a0cac0 !important;
+  border-bottom: 4px solid #68a697 !important;
+  A {
+    color: white !important;
+  }
+}
+}
+}
+
+}
 /*////////写真ページphoto.htmlここまで//////////*/
 /*////////写真ページ＞作品情報photoProdact.htmlここから//////////*/
 #photoProdact {
